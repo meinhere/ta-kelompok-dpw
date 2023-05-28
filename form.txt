@@ -1,0 +1,11 @@
+## Data Diri
+1. Nama Lengkap (textbox) => alfabet 
+2. Email (textbox) => format email
+3. No. Telp (textbox) => format telp, panjang digit
+4. Jenis Kelamin (radio) 
+5. Dipesan untuk orang lain (checkbox)
+
+## Pemesanan Hotel 
+1. Jumlah Kamar (dropdown menu)
+2. Keterangan (textarea)
+3. Tanggal pemesanan (date)
