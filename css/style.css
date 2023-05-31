@@ -123,36 +123,51 @@ body {
 
 /* Sidebar */
 .sidebar-box {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  position: absolute;
   position: fixed;
   top: 150px;
+  right: 0;
 }
 .sidebar-box .sidebar {
   display: flex;
   justify-content: flex-end;
-  width: 25rem;
 }
 .sidebar-box .sidebar .sidebar-content {
-  opacity: 0;
-  transition: all 0.3s;
+  display: none;
 }
 .sidebar-box .sidebar .sidebar-content.active {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--light);
   flex-direction: column;
   margin-right: 1rem;
   padding: 10px 20px;
   border-radius: 5px;
   background-color: var(--primary);
-  opacity: 1;
+}
+.sidebar-box .sidebar .sidebar-content iframe {
+  width: 25rem;
+  height: 20rem;
+  border-radius: 20px;
+  padding: 15px;
+}
+.sidebar-box .sidebar .sidebar-content .btn-contact {
+  margin: 10px 0;
+  padding: 10px 15px;
+  background-color: var(--secondary);
+  border: 2px solid var(--secondary);
+  color: var(--light);
+  border-radius: 5px;
+}
+.sidebar-box .sidebar .sidebar-content .btn-contact:hover {
+  border: 2px solid var(--light);
+  color: var(--light);
+}
+.sidebar-box .sidebar .sidebar-content .btn-contact::after {
+  display: none;
 }
 .sidebar-box .sidebar .sidebar-content a {
   padding: 10px 0;
-  color: #fff;
 }
 .sidebar-box .sidebar .sidebar-btn {
   padding-top: 10px;
@@ -169,7 +184,7 @@ body {
   background-color: var(--secondary);
 }
 
-/* Content */
+/* HOMEPAGE */
 
 /* Accomodation Section */
 .accommodation-section,
@@ -177,7 +192,8 @@ body {
   background-color: var(--light);
   padding: 100px 0;
 }
-.accommodation-section h3 {
+.accommodation-section h3,
+.form-content .form-title {
   text-align: center;
   font-size: 70px;
   font-family: "Catchy Mager";
@@ -314,12 +330,118 @@ body {
   padding-bottom: 10px;
 }
 
+/* VALIDATION PAGE */
+
+/* Form Content */
+.form-content {
+  background-color: var(--light);
+  padding: 50px 0;
+}
+.myForm {
+  display: flex;
+  padding: 50px 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.myForm .form-group {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+.myForm .form-group .form-box {
+  border: 2px solid var(--primary);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.myForm .form-group:last-child .form-box {
+  width: 28rem;
+}
+.myForm .form-group:first-child .form-box:first-child {
+  width: 35rem;
+  padding: 10px;
+  text-align: center;
+}
+.myForm .form-group .form-box .form-box-title {
+  font-size: 1.3rem;
+}
+.myForm .form-group .form-box .input-group {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+.form-group .form-box .input-group .form-label {
+  font-size: 1rem;
+  padding-bottom: 10px;
+}
+.form-group .form-box .input-group .form-label span {
+  color: red;
+}
+.form-group .form-box .input-group .form-input[type="text"],
+.form-group .form-box .input-group .form-input[type="date"] {
+  max-height: 30px;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+}
+.form-group .form-box .input-group .form-input[type="date"] {
+  text-align: center;
+  margin: 0 auto;
+  width: 25rem;
+}
+.form-group .form-box .input-group .form-input[type="text"]:focus {
+  border: 2px solid var(--secondary);
+}
+.form-group .form-box .hotel,
+.form-group .form-box .room {
+  display: flex;
+  margin: 10px 0;
+  gap: 10px;
+  align-items: center;
+}
+.form-group .form-box .hotel img,
+.form-group .form-box .room img {
+  width: 150px;
+  border-radius: 5px;
+}
+.form-group .form-box .input-group[id="dropdown"] {
+  flex-direction: row;
+}
+.form-group .form-box .input-group[id="dropdown"] .form-label {
+  padding-right: 12px;
+}
+.form-group .form-box .input-group select {
+  font-family: "Poppins", sans-serif;
+  padding: 5px;
+  border-radius: 5px;
+}
+#btnSubmit {
+  border: 2px solid var(--primary);
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  float: right;
+}
+#btnSubmit:hover {
+  cursor: pointer;
+  background-color: var(--primary);
+  color: var(--light);
+}
+#pesanError {
+  padding-top: 10px;
+  font-size: 0.8rem;
+  color: red;
+}
+
 /* Footer */
 footer {
   width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
   background-color: var(--primary);
   color: var(--light);
   padding: 15px 0;
@@ -359,7 +481,7 @@ footer {
   }
 
   .navbar .navbar-nav a {
-    color: var(--bg);
+    color: var(--light);
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
