@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Form | The Sazbiro</title>
+  </head>
+  <body>
+    <!-- Header Start -->
+    <header id="home">
+      <!-- Menu Start -->
+      <nav class="menu">
+        <a href="index.html" class="menu-logo">
+          <img src="img/logo.png" alt="Logo Website" />
+        </a>
+        <div class="menu-nav">
+          <a href="index.html">Beranda</a>
+          <a href="index.html#accomodation">Akomodasi</a>
+          <a href="evaluation.html">Evaluasi</a>
+          <a href="about.html">Tentang Kami</a>
+        </div>
+      </nav>
+      <!-- Menu End -->
+
+      <!-- Hero Start -->
+      <div class="hero">
+        <main class="content">
+          <span class="title"> - Pesan Hotel - </span>
+          <h1>Hotel Terbaik & Ternyaman</h1>
+          <p>Pesan kamar yang sesuai dengan kebutuhan anda disini..</p>
+        </main>
+      </div>
+      <!-- Hero End -->
+    </header>
+    <!-- Header End -->
+
+    <!-- Sidebar Start -->
+    <div class="sidebar-box">
+      <div class="sidebar">
+        <div class="sidebar-content">
+          <h4 class="sidebar-title">Alamat Website</h4>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.973737994912!2d112.72076177483503!3d-7.129034269918885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd803dd886bbff5%3A0x9777ca139b28195d!2sUniversitas%20Trunojoyo%20Madura!5e0!3m2!1sid!2sid!4v1685511550196!5m2!1sid!2sid"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <p>Jalan Raya Telang, Kec. Kamal, Kab. Bangkalan</p>
+          <a href="#" class="btn-contact">Hubungi Kami</a>
+        </div>
+        <div class="sidebar-btn">
+          <span>&laquo; Menu</span>
+        </div>
+      </div>
+    </div>
+    <!-- Sidebar End -->
+
+    <!-- Form Content Start -->
+    <div class="form-content">
+      <h3 class="form-title">Form Pemesanan</h3>
+
+      <form action="" method="post" class="myForm" id="myForm">
+        <div class="form-group">
+          <div class="form-box">
+            <h4 class="form-box-title">Waktu Pemesanan</h4>
+            <div class="input-group">
+              <label for="check-in" class="form-label"
+                >Tanggal Check In <span>*</span></label
+              >
+              <input type="date" class="form-input" id="check-in" />
+              <span id="pesanError"></span>
+            </div>
+            <div class="input-group">
+              <label for="check-out" class="form-label"
+                >Tanggal Check Out <span>*</span></label
+              >
+              <input type="date" class="form-input" id="check-out" />
+              <span id="pesanError"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="form-box">
+            <h4 class="form-box-title">Data Diri Anda</h4>
+            <div class="input-group">
+              <label for="nama" class="form-label"
+                >Nama Lengkap <span>*</span></label
+              >
+              <input
+                type="text"
+                class="form-input"
+                id="nama"
+                placeholder="Masukkan nama"
+              />
+              <span id="pesanError"></span>
+            </div>
+            <div class="input-group">
+              <label for="email" class="form-label">Email <span>*</span></label>
+              <input
+                type="text"
+                class="form-input"
+                id="email"
+                placeholder="Masukkan email"
+              />
+              <span id="pesanError"></span>
+            </div>
+            <div class="input-group">
+              <label for="telepon" class="form-label"
+                >Nomor Telepon <span>*</span></label
+              >
+              <input
+                type="text"
+                class="form-input"
+                id="telepon"
+                placeholder="Masukkan nomor telepon"
+              />
+              <span id="pesanError"></span>
+            </div>
+            <div class="input-group">
+              <label class="form-label">Pembayaran</label>
+              <div>
+                <input
+                  type="radio"
+                  class="form-input"
+                  id="payment-1"
+                  name="payment"
+                  checked
+                />
+                <label for="payment-1">BRI</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  class="form-input"
+                  id="payment-2"
+                  name="payment"
+                />
+                <label for="payment-2">BCA</label>
+              </div>
+            </div>
+            <div class="input-group">
+              <div>
+                <input type="checkbox" class="form-input" id="reserve-other" />
+                <label for="reserve-other" class="form-label"
+                  >Pesankan untuk orang lain</label
+                >
+              </div>
+            </div>
+          </div>
+          <div class="form-box">
+            <h4 class="form-box-title">Keterangan Kamar</h4>
+            <div class="hotel">
+              <img src="img/akomodasi/Hotel.jpg" alt="Hotel 1" />
+              <div class="desc">
+                <h4 class="title">Ulun Ubud Resort & Spa</h4>
+                <p class="locate">Lokasi - Ubud, Bali</p>
+              </div>
+            </div>
+            <div class="room">
+              <img src="img/room/classic-suite/1.jpg" alt="Kamar 1" />
+              <div class="desc">
+                <h4 class="title">Classic Suite</h4>
+                <p class="price">Rp. 200.000</p>
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label class="form-label">Tempat Tidur</label>
+              <div>
+                <input
+                  type="radio"
+                  class="form-input"
+                  id="bed-type1"
+                  name="bed-type"
+                  checked
+                />
+                <label for="bed-type1">2 Kasur Single</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  class="form-input"
+                  id="bed-type2"
+                  name="bed-type"
+                />
+                <label for="bed-type2">1 Kasur Double</label>
+              </div>
+              <span id="pesanError"></span>
+            </div>
+            <div class="input-group" id="dropdown">
+              <label for="much-order" class="form-label">Jumlah Kamar</label>
+              <select name="much-order" id="much-order">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <button type="submit" id="btnSubmit">Pesan Kamar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- Main-Content End -->
+
+    <footer>
+      <p>Kelompok 2 TA - Dasar Pemrograman Web</p>
+      <p>Copyright &copy; 2023 - Dikembangkan oleh: Tim The Sazbiro.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/form.js"></script>
+  </body>
+</html>
