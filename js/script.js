@@ -37,5 +37,5 @@ var url = window.location.href; // ambil url dari halaman saat ini
 var fileName = url.split(/(\\|\/)/g).pop(); // lakukan split sehingga mendapatkan nama file nya saja
 // Apabila fileName nya form.html
 if (fileName == "form.html") {
-  bg.style.background = "url(../img/header2.jpg)"; // ubah background
+  bg.style.background = "url(img/header2.jpg)"; // ubah background
 }
