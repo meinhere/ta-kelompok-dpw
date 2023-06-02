@@ -168,6 +168,7 @@ body {
 }
 .sidebar-box .sidebar .sidebar-content a {
   padding: 10px 0;
+  color: var(--light);
 }
 .sidebar-box .sidebar .sidebar-btn {
   padding-top: 10px;
