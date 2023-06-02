@@ -51,18 +51,24 @@
     <div class="sidebar-box">
       <div class="sidebar">
         <div class="sidebar-content">
-          <h4 class="sidebar-title">Alamat Website</h4>
+          <h4 class="sidebar-title">Maps</h4>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.973737994912!2d112.72076177483503!3d-7.129034269918885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd803dd886bbff5%3A0x9777ca139b28195d!2sUniversitas%20Trunojoyo%20Madura!5e0!3m2!1sid!2sid!4v1685511550196!5m2!1sid!2sid"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.125557156569!2d115.24960747877118!3d-8.487171069776958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23d335e2cdb41%3A0x19a98f189b019894!2sUlun%20Ubud%20Resort%20%26%20Spa!5e0!3m2!1sid!2sid!4v1685697151485!5m2!1sid!2sid"
+            width="600"
+            height="450"
+            style="border: 0"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
-          <p>Jalan Raya Telang, Kec. Kamal, Kab. Bangkalan</p>
-          <a href="#" class="btn-contact">Hubungi Kami</a>
+          <p>
+            G773+4QQ, Jl. Raya Sanggingan, Kedewatan, Kecamatan Ubud, Kabupaten
+            Gianyar, Bali 80571
+          </p>
+          <a href="about.html" class="btn-contact">Hubungi Kami</a>
         </div>
         <div class="sidebar-btn">
-          <span>&laquo; Menu</span>
+          <span>&laquo; Lokasi</span>
         </div>
       </div>
     </div>
@@ -72,7 +78,7 @@
     <div class="form-content">
       <h3 class="form-title">Form Pemesanan</h3>
 
-      <form action="" method="post" class="myForm" id="myForm">
+      <form action="evaluation.html" method="post" class="myForm" id="myForm">
         <div class="form-group">
           <div class="form-box">
             <h4 class="form-box-title">Waktu Pemesanan</h4>
@@ -81,14 +87,14 @@
                 >Tanggal Check In <span>*</span></label
               >
               <input type="date" class="form-input" id="check-in" />
-              <span id="pesanError"></span>
+              <span id="pesanError" name="pesanError"></span>
             </div>
             <div class="input-group">
               <label for="check-out" class="form-label"
                 >Tanggal Check Out <span>*</span></label
               >
               <input type="date" class="form-input" id="check-out" />
-              <span id="pesanError"></span>
+              <span id="pesanError" name="pesanError"></span>
             </div>
           </div>
         </div>
@@ -106,7 +112,7 @@
                 id="nama"
                 placeholder="Masukkan nama"
               />
-              <span id="pesanError"></span>
+              <span id="pesanError" name="pesanError"></span>
             </div>
             <div class="input-group">
               <label for="email" class="form-label">Email <span>*</span></label>
@@ -116,7 +122,7 @@
                 id="email"
                 placeholder="Masukkan email"
               />
-              <span id="pesanError"></span>
+              <span id="pesanError" name="pesanError"></span>
             </div>
             <div class="input-group">
               <label for="telepon" class="form-label"
@@ -128,7 +134,7 @@
                 id="telepon"
                 placeholder="Masukkan nomor telepon"
               />
-              <span id="pesanError"></span>
+              <span id="pesanError" name="pesanError"></span>
             </div>
             <div class="input-group">
               <label class="form-label">Pembayaran</label>
@@ -140,7 +146,7 @@
                   name="payment"
                   checked
                 />
-                <label for="payment-1">BRI</label>
+                <label for="payment-1" name="pay-1">BRI</label>
               </div>
               <div>
                 <input
@@ -149,13 +155,34 @@
                   id="payment-2"
                   name="payment"
                 />
-                <label for="payment-2">BCA</label>
+                <label for="payment-2" name="pay-2">BCA</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  class="form-input"
+                  id="payment-3"
+                  name="payment"
+                />
+                <label for="payment-3" name="pay-3">BTN</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  class="form-input"
+                  id="payment-4"
+                  name="payment"
+                />
+                <label for="payment-4" name="pay-4">Mandiri</label>
               </div>
             </div>
             <div class="input-group">
               <div>
                 <input type="checkbox" class="form-input" id="reserve-other" />
-                <label for="reserve-other" class="form-label"
+                <label
+                  for="reserve-other"
+                  class="form-label"
+                  name="reserve-other"
                   >Pesankan untuk orang lain</label
                 >
               </div>
@@ -188,7 +215,7 @@
                   name="bed-type"
                   checked
                 />
-                <label for="bed-type1">2 Kasur Single</label>
+                <label for="bed-type1" name="bed-1">2 Kasur Single</label>
               </div>
               <div>
                 <input
@@ -197,9 +224,9 @@
                   id="bed-type2"
                   name="bed-type"
                 />
-                <label for="bed-type2">1 Kasur Double</label>
+                <label for="bed-type2" name="bed-2">1 Kasur Double</label>
               </div>
-              <span id="pesanError"></span>
+              <span id="pesanError" name="pesanError"></span>
             </div>
             <div class="input-group" id="dropdown">
               <label for="much-order" class="form-label">Jumlah Kamar</label>
@@ -210,6 +237,17 @@
                 <option value="4">4</option>
                 <option value="5">5</option>
               </select>
+            </div>
+            <div class="input-group">
+              <label for="extra-service" class="form-label"
+                >Layanan Tambahan</label
+              >
+              <textarea
+                name="extra-service"
+                id="extra-service"
+                class="form-input"
+                placeholder="Contoh: butuh tambahan bantal.."
+              ></textarea>
             </div>
             <button type="submit" id="btnSubmit">Pesan Kamar</button>
           </div>

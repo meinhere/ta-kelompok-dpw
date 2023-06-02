@@ -135,13 +135,14 @@ body {
 }
 .sidebar-box .sidebar .sidebar-content.active {
   display: flex;
-  justify-content: center;
+  text-align: center;
   align-items: center;
   color: var(--light);
   flex-direction: column;
   margin-right: 1rem;
   padding: 10px 20px;
   border-radius: 5px;
+  width: 27rem;
   background-color: var(--primary);
 }
 .sidebar-box .sidebar .sidebar-content iframe {
@@ -269,6 +270,7 @@ body {
   padding: 5px 50px;
   gap: 1.2rem;
 }
+
 .room-content .room-images {
   flex: 2;
   overflow: hidden;
@@ -363,9 +365,9 @@ body {
 .myForm .form-group:last-child .form-box {
   width: 28rem;
 }
-.myForm .form-group:first-child .form-box:first-child {
-  width: 35rem;
-  padding: 10px;
+.myForm .form-group:first-child .form-box {
+  width: 40rem;
+  padding: 15px;
   text-align: center;
 }
 .myForm .form-group .form-box .form-box-title {
@@ -416,10 +418,18 @@ body {
 .form-group .form-box .input-group[id="dropdown"] .form-label {
   padding-right: 12px;
 }
-.form-group .form-box .input-group select {
+.form-group .form-box .input-group select,
+.form-group .form-box .input-group textarea {
   font-family: "Poppins", sans-serif;
+}
+.form-group .form-box .input-group select {
   padding: 5px;
   border-radius: 5px;
+}
+.form-group .form-box .input-group textarea {
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
 }
 #btnSubmit {
   border: 2px solid var(--primary);
@@ -502,18 +512,22 @@ footer {
   html {
     font-size: 80%;
   }
-
-  .room-content {
-    flex-direction: column;
-  }
 }
 
 /* Tablet */
 @media (max-width: 768px) {
   html {
-    font-size: 70%;
+    font-size: 72%;
   }
 
+  .accommodation-section,
+  .room-section {
+    padding: 50px 0;
+  }
+  .accommodation-section h3,
+  .form-content .form-title {
+    font-size: 52px;
+  }
   .room-content {
     flex-direction: column;
   }
@@ -522,9 +536,16 @@ footer {
     padding: 0;
   }
 
-  .accommodation-section,
-  .room-section {
-    padding: 50px 0;
+  .myForm .form-group {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .myForm .form-group:last-child .form-box,
+  .myForm .form-group:first-child .form-box {
+    width: 80vw;
+  }
+  .form-group .form-box .input-group .form-input[type="date"] {
+    width: 70vw;
   }
 }
 

@@ -19,20 +19,34 @@ function validate() {
 
   // ulang semua elemen formInput menjadi variabel input
   formInput.forEach(function (input) {
-    var inputName = input.getAttribute("id"); // ambil attribute id dari setiap input
+    var inputName = input.id; // ambil attribute id dari setiap input
     var pesanError = input.nextElementSibling; // ambil elemen selanjutnya dari input (untuk pesanError)
 
     // Validasi Tanggal
+    // Untuk Check-in dan Check-out
     if (inputName == "check-in" || inputName == "check-out") {
       var dateNow = new Date(fullDate).getTime(); // ambil waktu (int) sekarang
       var dateReserved = new Date(input.value).getTime(); // ambil waktu (int) tanggal yang akan dipesan
 
       if (input.value == "") {
         pesanError.innerHTML = "Tanggal harus diisi";
-      } else if (dateReserved < dateNow) {
+      } else if (dateNow > dateReserved) {
         pesanError.innerHTML = "Tanggal tidak valid";
       } else {
         pesanError.innerHTML = "";
+      }
+    }
+    // Untuk Check-out
+    if (inputName == "check-out") {
+      var dateCheckIn = new Date(
+        document.querySelector("#check-in").value
+      ).getTime(); // ambil tanggal check-in
+      var dateCheckOut = new Date(
+        document.querySelector("#check-out").value
+      ).getTime(); // ambil tanggal check-out
+
+      if (dateCheckIn > dateCheckOut) {
+        pesanError.innerHTML = "Tanggal check-out tidak valid";
       }
     }
 
@@ -79,12 +93,14 @@ function validate() {
       }
     }
 
-    if (pesanError && pesanError.innerHTML != "") {
-      hasError = true;
-      input.style.border = "2px solid red";
-    } else {
-      hasError = false;
-      input.style.border = "2px solid green";
+    if (pesanError && pesanError.id == "pesanError") {
+      if (pesanError.innerHTML != "") {
+        hasError = true;
+        input.style.border = "2px solid red";
+      } else {
+        hasError = false;
+        input.style.border = "2px solid green";
+      }
     }
   });
 
