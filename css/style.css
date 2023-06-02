@@ -448,6 +448,50 @@ footer {
   padding: 15px 0;
 }
 
+/*Content Evaluation*/
+.evaluation-section {
+  background-color: var(--light);
+  padding: 100px 0 0 0;
+}
+.evaluation-section h3 {
+  text-align: center;
+  font-size: 70px;
+  font-family: "Catchy Mager";
+}
+
+.eval {
+  border: 1px solid;
+  border-radius: 10px;
+  width: 70%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.eval-head {
+  display: flex;
+}
+.eval-head p {
+  border: 1px solid black;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: var(--primary);
+  color: var(--light);
+}
+.eval-list {
+  display: flex;
+}
+.eval-list p {
+  border: 1px solid;
+  width: 100%;
+  padding: 5px;
+}
+.eval-nomor {
+  width: 10%;
+  text-align: center;
+}
+
 /* Media Queries */
 
 /* Laptop */
