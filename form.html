@@ -128,13 +128,16 @@
               <label for="telepon" class="form-label"
                 >Nomor Telepon <span>*</span></label
               >
-              <input
-                type="text"
-                class="form-input"
-                id="telepon"
-                placeholder="Masukkan nomor telepon"
-              />
-              <span id="pesanError" name="pesanError"></span>
+              <div class="tel-inp-group">
+                <span>+62</span>
+                <input
+                  type="text"
+                  class="form-input"
+                  id="telepon"
+                  placeholder="Masukkan nomor telepon"
+                />
+                <span id="pesanError" name="pesanError"></span>
+              </div>
             </div>
             <div class="input-group">
               <label class="form-label">Pembayaran</label>
@@ -245,7 +248,6 @@
               <textarea
                 name="extra-service"
                 id="extra-service"
-                class="form-input"
                 placeholder="Contoh: butuh tambahan bantal.."
               ></textarea>
             </div>

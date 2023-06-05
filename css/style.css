@@ -400,6 +400,10 @@ body {
 .form-group .form-box .input-group .form-input[type="text"]:focus {
   border: 2px solid var(--secondary);
 }
+.form-group .form-box .input-group .tel-inp-group .form-input {
+  width: 85%;
+  margin-left: 10px;
+}
 .form-group .form-box .hotel,
 .form-group .form-box .room {
   display: flex;
@@ -448,6 +452,7 @@ body {
   padding-top: 10px;
   font-size: 0.8rem;
   color: red;
+  display: block;
 }
 
 /* Footer */

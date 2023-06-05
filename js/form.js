@@ -55,8 +55,8 @@ function validate() {
       var namaPattern = /^[\D]+$/;
       if (input.value == "") {
         pesanError.innerHTML = "Field tidak boleh kosong!!";
-      } else if (input.value.length > 20) {
-        pesanError.innerHTML = "Nama terlalu panjang";
+      } else if (input.value.length < 3 || input.value.length > 50) {
+        pesanError.innerHTML = "Nama terlalu pendek/panjang";
       } else if (!namaPattern.test(input.value)) {
         pesanError.innerHTML = "Field harus berisi huruf";
       } else {
@@ -66,10 +66,10 @@ function validate() {
 
     // Validasi Email
     if (inputName == "email") {
-      var emailPattern = /^[\S]+@[\S]+\.[\S]+$/;
+      var emailPattern = /^[\S]+@[^\.][\S]+\.[\S]+$/;
       if (input.value == "") {
         pesanError.innerHTML = "Field tidak boleh kosong!!";
-      } else if (input.value.length > 25) {
+      } else if (input.value.length > 50) {
         pesanError.innerHTML = "Email terlalu panjang";
       } else if (!emailPattern.test(input.value)) {
         pesanError.innerHTML = "Email tidak valid";
@@ -80,26 +80,24 @@ function validate() {
 
     // Validasi Nomor Telepon
     if (inputName == "telepon") {
-      var teleponPattern = /^\+62[\d]+$/;
+      var teleponPattern = /^[\d]+$/;
       if (input.value == "") {
         pesanError.innerHTML = "Field tidak boleh kosong!!";
       } else if (!teleponPattern.test(input.value)) {
-        pesanError.innerHTML = "Nomor telepon tidak valid (awali dengan +62)";
-      } else if (input.value.length > 14 || input.value.length < 12) {
-        pesanError.innerHTML =
-          "Nomor telepon tidak valid (digit terlalu pendek/panjang)";
+        pesanError.innerHTML = "Nomor telepon harus berupa angka";
+      } else if (input.value.length < 11 || input.value.length > 13) {
+        pesanError.innerHTML = "Digit nomor terlalu pendek/panjang)";
       } else {
         pesanError.innerHTML = "";
       }
     }
 
-    if (pesanError && pesanError.id == "pesanError") {
-      if (pesanError.innerHTML != "") {
+    if (pesanError.tagName == "SPAN") {
+      if (pesanError.innerHTML == "") {
+        input.style.border = "2px solid green";
+      } else {
         hasError = true;
         input.style.border = "2px solid red";
-      } else {
-        hasError = false;
-        input.style.border = "2px solid green";
       }
     }
   });
