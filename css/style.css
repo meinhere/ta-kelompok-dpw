@@ -189,12 +189,14 @@ body {
 
 /* Accomodation Section */
 .accommodation-section,
-.room-section {
+.room-section,
+.evaluation-section {
   background-color: var(--light);
   padding: 100px 0;
 }
 .accommodation-section h3,
 .form-content .form-title,
+.evaluation-section h3,
 .about-us h3 {
   text-align: center;
   font-size: 70px;
@@ -458,47 +460,12 @@ body {
 }
 
 /* Evaluation */
-.evaluation-section {
-  background-color: var(--light);
-  padding: 100px 0 0 0;
-}
-.evaluation-section h3 {
-  text-align: center;
-  font-size: 70px;
-  font-family: "Catchy Mager";
-}
-
-.eval {
-  border: 1px solid;
-  border-radius: 10px;
-  width: 70%;
-  margin: auto;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-.eval-head {
-  display: flex;
-}
-.eval-head p {
-  border: 1px solid black;
-  width: 100%;
-  padding: 10px;
-  text-align: center;
+.evaluation-section table th {
   background-color: var(--primary);
   color: var(--light);
 }
-.eval-list {
-  display: flex;
-}
-.eval-list p {
-  border: 1px solid;
-  width: 100%;
-  padding: 5px;
-}
-.eval-nomor {
-  width: 10%;
-  text-align: center;
+.evaluation-section table ul {
+  padding-left: 15px;
 }
 
 /* About Us */
@@ -553,8 +520,8 @@ body {
   width: 100%;
   height: 100%;
   transform: translate(-25px, -25px);
-  z-index: -1;
   position: relative;
+  z-index: -1;
   border-radius: 5px;
 }
 .profil:nth-child(1) .image .foto {
@@ -617,6 +584,7 @@ body {
 }
 .progress-table table,
 .source-table table,
+.evaluation-section table,
 th,
 td {
   border: 1px solid black;
@@ -624,7 +592,8 @@ td {
   padding: 10px;
   margin: 50px auto;
 }
-.source-table table {
+.source-table table,
+.evaluation-section table {
   max-width: 70vw;
 }
 .source-table table tr th:nth-child(2) {
