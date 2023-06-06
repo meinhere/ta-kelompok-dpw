@@ -38,6 +38,8 @@ var fileName = url.split(/(\\|\/)/g).pop(); // lakukan split sehingga mendapatka
 // Apabila fileName nya form.html
 if (fileName == "form.html") {
   bg.style.backgroundImage = "url(img/header2.jpg)"; // ubah background
+} else if (fileName == "evaluation.html") {
+  bg.style.backgroundImage = "url(img/header3.jpg)";
 } else if (fileName == "about.html") {
   bg.style.backgroundImage = "url(img/header4.jpg)";
 }
