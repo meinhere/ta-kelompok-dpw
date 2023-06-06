@@ -221,6 +221,8 @@ body {
 }
 .akom-list-head img {
   width: 350px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
 .akom-list-desc {
