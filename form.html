@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -27,8 +27,10 @@
           <img src="img/logo.png" alt="Logo Website" />
         </a>
         <div class="menu-nav">
-          <a href="index.html">Beranda</a>
-          <a href="index.html#accomodation">Akomodasi</a>
+          <a href="index.html" class="home-link">Beranda</a>
+          <a href="index.html#accomodation" class="accomodation-link"
+            >Akomodasi</a
+          >
           <a href="evaluation.html">Evaluasi</a>
           <a href="about.html">Tentang Kami</a>
         </div>
@@ -37,11 +39,11 @@
 
       <!-- Hero Start -->
       <div class="hero">
-        <main class="content">
+        <div class="content">
           <span class="title"> - Pesan Hotel - </span>
           <h1>Hotel Terbaik & Ternyaman</h1>
           <p>Pesan kamar yang sesuai dengan kebutuhan anda disini..</p>
-        </main>
+        </div>
       </div>
       <!-- Hero End -->
     </header>
@@ -87,14 +89,14 @@
                 >Tanggal Check In <span>*</span></label
               >
               <input type="date" class="form-input" id="check-in" />
-              <span id="pesanError" name="pesanError"></span>
+              <span class="pesanError"></span>
             </div>
             <div class="input-group">
               <label for="check-out" class="form-label"
                 >Tanggal Check Out <span>*</span></label
               >
               <input type="date" class="form-input" id="check-out" />
-              <span id="pesanError" name="pesanError"></span>
+              <span class="pesanError"></span>
             </div>
           </div>
         </div>
@@ -112,7 +114,7 @@
                 id="nama"
                 placeholder="Masukkan nama"
               />
-              <span id="pesanError" name="pesanError"></span>
+              <span class="pesanError"></span>
             </div>
             <div class="input-group">
               <label for="email" class="form-label">Email <span>*</span></label>
@@ -122,7 +124,7 @@
                 id="email"
                 placeholder="Masukkan email"
               />
-              <span id="pesanError" name="pesanError"></span>
+              <span class="pesanError"></span>
             </div>
             <div class="input-group">
               <label for="telepon" class="form-label"
@@ -136,7 +138,7 @@
                   id="telepon"
                   placeholder="Masukkan nomor telepon"
                 />
-                <span id="pesanError" name="pesanError"></span>
+                <span class="pesanError"></span>
               </div>
             </div>
             <div class="input-group">
@@ -147,9 +149,8 @@
                   class="form-input"
                   id="payment-1"
                   name="payment"
-                  checked
                 />
-                <label for="payment-1" name="pay-1">BRI</label>
+                <label for="payment-1">BRI</label>
               </div>
               <div>
                 <input
@@ -158,7 +159,7 @@
                   id="payment-2"
                   name="payment"
                 />
-                <label for="payment-2" name="pay-2">BCA</label>
+                <label for="payment-2">BCA</label>
               </div>
               <div>
                 <input
@@ -167,7 +168,7 @@
                   id="payment-3"
                   name="payment"
                 />
-                <label for="payment-3" name="pay-3">BTN</label>
+                <label for="payment-3">BTN</label>
               </div>
               <div>
                 <input
@@ -176,16 +177,13 @@
                   id="payment-4"
                   name="payment"
                 />
-                <label for="payment-4" name="pay-4">Mandiri</label>
+                <label for="payment-4">Mandiri</label>
               </div>
             </div>
             <div class="input-group">
               <div>
                 <input type="checkbox" class="form-input" id="reserve-other" />
-                <label
-                  for="reserve-other"
-                  class="form-label"
-                  name="reserve-other"
+                <label for="reserve-other" class="form-label"
                   >Pesankan untuk orang lain</label
                 >
               </div>
@@ -216,9 +214,8 @@
                   class="form-input"
                   id="bed-type1"
                   name="bed-type"
-                  checked
                 />
-                <label for="bed-type1" name="bed-1">2 Kasur Single</label>
+                <label for="bed-type1">2 Kasur Single</label>
               </div>
               <div>
                 <input
@@ -227,9 +224,9 @@
                   id="bed-type2"
                   name="bed-type"
                 />
-                <label for="bed-type2" name="bed-2">1 Kasur Double</label>
+                <label for="bed-type2">1 Kasur Double</label>
               </div>
-              <span id="pesanError" name="pesanError"></span>
+              <span class="pesanError"></span>
             </div>
             <div class="input-group" id="dropdown">
               <label for="much-order" class="form-label">Jumlah Kamar</label>

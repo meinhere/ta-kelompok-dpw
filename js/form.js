@@ -3,6 +3,11 @@ const formInput = document.querySelectorAll(".form-input"); // ambil semua eleme
 var form = document.getElementById("myForm"); // ambil elemen dengan nama id myForm
 
 // Set Default Checked in Radio Button Input
+const payment = document.querySelector("#payment-1");
+const bed = document.querySelector("#bed-type1");
+
+payment.setAttribute("checked", "checked");
+bed.setAttribute("checked", "checked");
 
 // Set Default Value Date
 const date = new Date(); // inisialisasi built-in function Date()
@@ -66,7 +71,7 @@ function validate() {
         if (input.value.length < 3 || input.value.length > 50) {
           pesanError.innerHTML = "Nama terlalu pendek/panjang";
         } else if (!namaPattern.test(input.value)) {
-          pesanError.innerHTML = "Field harus berisi huruf";
+          pesanError.innerHTML = "Nama harus berisi huruf";
         } else {
           pesanError.innerHTML = "";
         }
@@ -101,8 +106,8 @@ function validate() {
       if (input.value != "") {
         if (!teleponPattern.test(input.value)) {
           pesanError.innerHTML = "Nomor telepon harus berupa angka";
-        } else if (input.value.length < 11 || input.value.length > 13) {
-          pesanError.innerHTML = "Digit nomor terlalu pendek/panjang)";
+        } else if (input.value.length < 10 || input.value.length > 12) {
+          pesanError.innerHTML = "Digit nomor terlalu pendek/panjang";
         } else {
           pesanError.innerHTML = "";
         }
