@@ -27,8 +27,10 @@
           <img src="img/logo.png" alt="Logo Website" />
         </a>
         <div class="menu-nav">
-          <a href="index.html">Beranda</a>
-          <a href="index.html#accomodation">Akomodasi</a>
+          <a href="index.html" class="home-link">Beranda</a>
+          <a href="index.html#accomodation" class="accomodation-link"
+            >Akomodasi</a
+          >
           <a href="evaluation.html">Evaluasi</a>
           <a href="#about-us" class="active">Tentang Kami</a>
         </div>
@@ -51,13 +53,13 @@
     <div class="sidebar-box">
       <div class="sidebar">
         <div class="sidebar-content">
-          <a href="#room-1">Legian Paradiso Hotel</a>
-          <a href="#room-2">Ulun Ubud Resort & Spa</a>
-          <a href="#room-3">Maya Resorts</a>
-          <a href="#room-4">Padma Resort Ubud</a>
+          <h5>List</h5>
+          <a href="#about-us" class="side-item active">Tentang Kami</a>
+          <a href="#progress-table" class="side-item">Pembagian Tugas</a>
+          <a href="#source-table" class="side-item">Source Gambar</a>
         </div>
         <div class="sidebar-btn">
-          <span>&laquo; List Hotel</span>
+          <span>&laquo; Link</span>
         </div>
       </div>
     </div>
@@ -124,7 +126,7 @@
         </div>
       </div>
 
-      <div class="progress-table">
+      <div class="progress-table" id="progress-table">
         <h4>Pembagian Tugas</h4>
         <table>
           <tr>
@@ -175,7 +177,7 @@
         </table>
       </div>
 
-      <div class="source-table">
+      <div class="source-table" id="source-table">
         <h4>Source Gambar</h4>
         <table>
           <tr>

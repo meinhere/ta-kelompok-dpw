@@ -47,7 +47,8 @@ body {
 }
 .menu .menu-nav a:hover,
 .menu .menu-nav a.active,
-.sidebar-box .sidebar .sidebar-content a:hover {
+.sidebar-box .sidebar .sidebar-content a:hover,
+.sidebar-box .sidebar .sidebar-content a.active {
   color: var(--secondary);
 }
 .menu .menu-nav a::after,
@@ -61,7 +62,8 @@ body {
 }
 .menu .menu-nav a:hover::after,
 .menu .menu-nav a.active::after,
-.sidebar-box .sidebar .sidebar-content a:hover::after {
+.sidebar-box .sidebar .sidebar-content a:hover::after,
+.sidebar-box .sidebar .sidebar-content a.active::after {
   transform: scaleX(0.5);
 }
 .menu.menu-fixed {
@@ -472,7 +474,7 @@ body {
 
 /* About Us */
 .about-us .head h3 {
-  padding-top: 30px;
+  padding-top: 100px;
 }
 .about-us .head span {
   font-size: 1.5rem;
@@ -577,6 +579,7 @@ body {
 .source-table {
   text-align: center;
   width: 100%;
+  padding-top: 100px;
 }
 .progress-table h4,
 .source-table h4 {
