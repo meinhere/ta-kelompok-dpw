@@ -142,7 +142,7 @@ body {
   margin-right: 1rem;
   padding: 10px 20px;
   border-radius: 5px;
-  width: 27rem;
+  max-width: 27rem;
   background-color: var(--primary);
 }
 .sidebar-box .sidebar .sidebar-content iframe {
@@ -189,12 +189,15 @@ body {
 
 /* Accomodation Section */
 .accommodation-section,
-.room-section {
+.room-section,
+.evaluation-section {
   background-color: var(--light);
   padding: 100px 0;
 }
 .accommodation-section h3,
-.form-content .form-title {
+.form-content .form-title,
+.evaluation-section h3,
+.about-us h3 {
   text-align: center;
   font-size: 70px;
   font-family: "Catchy Mager";
@@ -220,6 +223,8 @@ body {
 }
 .akom-list-head img {
   width: 350px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
 .akom-list-desc {
@@ -400,6 +405,10 @@ body {
 .form-group .form-box .input-group .form-input[type="text"]:focus {
   border: 2px solid var(--secondary);
 }
+.form-group .form-box .input-group .tel-inp-group .form-input {
+  width: 87%;
+  margin-left: 10px;
+}
 .form-group .form-box .hotel,
 .form-group .form-box .room {
   display: flex;
@@ -450,6 +459,150 @@ body {
   color: red;
 }
 
+/* Evaluation */
+.evaluation-section table th {
+  background-color: var(--primary);
+  color: var(--light);
+}
+.evaluation-section table ul {
+  padding-left: 15px;
+}
+
+/* About Us */
+.about-us .head h3 {
+  padding-top: 30px;
+}
+.about-us .head span {
+  font-size: 1.5rem;
+  display: block;
+  text-align: center;
+}
+.about-us .head .class-title {
+  padding: 50px 0;
+}
+.about-us .head .class-title span:first-child::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.2rem solid var(--primary);
+  width: 25%;
+  margin: 0 auto;
+}
+.about-us .content {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 40px;
+  margin: 0 auto 30px;
+  gap: 6rem;
+}
+.profil {
+  width: 35%;
+}
+.profil .image {
+  position: relative;
+  width: 100%;
+  padding-bottom: 10px;
+}
+.profil .image .foto {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 5px;
+}
+.profil .image .foto::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: translate(-25px, -25px);
+  position: relative;
+  z-index: -1;
+  border-radius: 5px;
+}
+.profil:nth-child(1) .image .foto {
+  background-image: url(../img/profil/bintang.jpg);
+}
+.profil:nth-child(1) .image .foto::before {
+  background-color: salmon;
+}
+.profil:nth-child(2) .image .foto {
+  background-image: url(../img/profil/sabil.jpg);
+}
+.profil:nth-child(2) .image .foto::before {
+  background-color: slateblue;
+}
+.profil:nth-child(3) .image .foto {
+  background-image: url(../img/profil/azriel.jpg);
+}
+.profil:nth-child(3) .image .foto::before {
+  background-color: #90ee90;
+}
+.profil:nth-child(4) .image .foto {
+  background-image: url(../img/profil/ronggo.jpg);
+}
+.profil:nth-child(4) .image .foto::before {
+  background-color: chocolate;
+}
+.progress {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-top: -41px;
+  width: 100%;
+  padding: 12px 0;
+  font-size: 0.9rem;
+  max-height: 42px;
+  border-radius: 0 0 5px 5px;
+  text-align: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+.profil .image .foto:hover ~ .progress {
+  opacity: 1;
+}
+.progress span {
+  color: black;
+  font-weight: 700;
+}
+.profil .data-diri .name {
+  font-weight: 700;
+}
+.progress-table,
+.source-table {
+  text-align: center;
+  width: 100%;
+}
+.progress-table h4,
+.source-table h4 {
+  font-size: 2.5rem;
+  font-family: "Catchy Mager";
+  text-align: center;
+}
+.progress-table table,
+.source-table table,
+.evaluation-section table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+  margin: 50px auto;
+}
+.source-table table,
+.evaluation-section table {
+  max-width: 70vw;
+}
+.source-table table tr th:nth-child(2) {
+  width: 300px;
+}
+.source-table img {
+  width: 100%;
+}
+
 /* Footer */
 footer {
   width: 100%;
@@ -459,50 +612,6 @@ footer {
   background-color: var(--primary);
   color: var(--light);
   padding: 15px 0;
-}
-
-/*Content Evaluation*/
-.evaluation-section {
-  background-color: var(--light);
-  padding: 100px 0 0 0;
-}
-.evaluation-section h3 {
-  text-align: center;
-  font-size: 70px;
-  font-family: "Catchy Mager";
-}
-
-.eval {
-  border: 1px solid;
-  border-radius: 10px;
-  width: 70%;
-  margin: auto;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-.eval-head {
-  display: flex;
-}
-.eval-head p {
-  border: 1px solid black;
-  width: 100%;
-  padding: 10px;
-  text-align: center;
-  background-color: var(--primary);
-  color: var(--light);
-}
-.eval-list {
-  display: flex;
-}
-.eval-list p {
-  border: 1px solid;
-  width: 100%;
-  padding: 5px;
-}
-.eval-nomor {
-  width: 10%;
-  text-align: center;
 }
 
 /* Media Queries */
@@ -546,6 +655,9 @@ footer {
   }
   .form-group .form-box .input-group .form-input[type="date"] {
     width: 70vw;
+  }
+  .form-group .form-box .input-group .tel-inp-group .form-input {
+    width: 90%;
   }
 }
 
