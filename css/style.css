@@ -412,6 +412,7 @@ body {
 .form-group .form-box .input-group .tel-inp-group .form-input {
   width: 87%;
   margin-left: 10px;
+  margin-bottom: 5px;
 }
 .form-group .form-box .hotel,
 .form-group .form-box .room {
@@ -457,7 +458,7 @@ body {
   background-color: var(--primary);
   color: var(--light);
 }
-#pesanError {
+.pesanError {
   padding-top: 10px;
   font-size: 0.8rem;
   color: red;
@@ -631,12 +632,12 @@ footer {
 /* Tablet */
 @media (max-width: 768px) {
   html {
-    font-size: 72%;
+    font-size: 80%;
   }
 
   .accommodation-section,
   .room-section {
-    padding: 50px 0;
+    padding: 80px 0;
   }
   .accommodation-section h3,
   .form-content .form-title {
@@ -676,10 +677,21 @@ footer {
 /* Mobile */
 @media (max-width: 450px) {
   html {
-    font-size: 60%;
+    font-size: 70%;
   }
 
   .profil {
     width: 100%;
+  }
+
+  .room-content .room-images .room-extra .order a {
+    padding: 8px 10px;
+  }
+  .room-section h3,
+  .form-content .form-title {
+    font-size: 3em;
+  }
+  .form-group .form-box .input-group .tel-inp-group .form-input {
+    width: 86%;
   }
 }

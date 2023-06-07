@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -27,8 +27,10 @@
           <img src="img/logo.png" alt="Logo Website" />
         </a>
         <div class="menu-nav">
-          <a href="index.html">Beranda</a>
-          <a href="index.html#accomodation">Akomodasi</a>
+          <a href="index.html" class="home-link">Beranda</a>
+          <a href="index.html#accomodation" class="accomodation-link"
+            >Akomodasi</a
+          >
           <a href="#evaluation" class="active">Evaluasi</a>
           <a href="about.html">Tentang Kami</a>
         </div>
@@ -37,11 +39,11 @@
 
       <!-- Hero Start -->
       <div class="hero">
-        <main class="content">
+        <div class="content">
           <span class="title"> - Evaluasi - </span>
           <h1>Akomodasi Sazbiro</h1>
           <p>Cek kelengkapan dan kesesuaian website kami.</p>
-        </main>
+        </div>
       </div>
       <!-- Hero End -->
     </header>
@@ -97,7 +99,7 @@
           <td>3</td>
           <td>Kesesuian nama file untuk halaman utama</td>
           <td>
-            File "index.html" untuk halaman utama telah dimodifikasi untuk
+            Nama file <b>index.html</b> untuk halaman utama telah sesuai untuk
             memenuhi persyaratan Tugas Aplikasi.
           </td>
         </tr>
@@ -116,8 +118,9 @@
           <td>5</td>
           <td>Kelengkapan penerapan validasi form</td>
           <td>
-            Website ini menggunakan <b>6 validasi</b> form : required, alfabet,
-            numerik, email, panjang digit dan karakter tertentu, serta tanggal.
+            Website ini menggunakan <b>7 validasi</b> form : required, alfabet,
+            numerik, email, panjang digit, panjang karakter, serta date untuk
+            tanggal.
           </td>
         </tr>
         <tr>
@@ -127,19 +130,40 @@
             <ul>
               <li>
                 Jika <b>field inputan tidak diisi</b>, maka muncul pesan error
-                <i>"Field tidak boleh kosong"</i>. Jika
+                <i>"Field tidak boleh kosong."</i>
               </li>
               <li>
-                <b>field nama terdapat angka</b>, maka pesan errornya
-                <i>"Field harus berisi huruf"</i> atau jika
+                Jika <b>field nama terdapat angka</b>, maka pesan errornya
+                <i>"Nama harus berisi huruf."</i>
               </li>
               <li>
-                <b>field nomor telepon terdapat huruf</b>, maka pesan errornya
-                <i>"Nomor telepon harus berupa angka"</i>, dan apabila
+                Jika <b>field nama kurang/lebih</b>, maka pesan errornya
+                <i>"Nama terlalu pendek/panjang."</i>
               </li>
               <li>
-                <b>Check-In Check-Out</b> maka muncul pesan error seperti
-                <i>"Tanggal check-out tidak valid"</i>.
+                Jika <b>field email tidak sesuai format</b>, maka pesan errornya
+                <i>"Email tidak valid."</i>
+              </li>
+              <li>
+                Jika <b>field email terlalu panjang</b>, maka pesan errornya
+                <i>"Email terlalu panjang."</i>
+              </li>
+              <li>
+                Jika <b>field nomor telepon terdapat huruf</b>, maka pesan
+                errornya <i>"Nomor telepon harus berupa angka."</i>
+              </li>
+              <li>
+                Jika <b>field nomor telepon kurang/lebih</b>, maka pesan
+                errornya <i>"Digit nomor terlalu pendek/panjang."</i>
+              </li>
+              <li>
+                Jika <b>tanggal check-in atau check-out</b> maka muncul pesan
+                error seperti <i>"Tanggal tidak valid."</i>
+              </li>
+              <li>
+                Jika <b>tanggal check-out kurang dari tanggal check-in</b> maka
+                muncul pesan error seperti
+                <i>"Tanggal check-out tidak valid."</i>
               </li>
             </ul>
           </td>
@@ -148,14 +172,17 @@
           <td>7</td>
           <td>Konsistensi desain antar halaman</td>
           <td>
-            Website ini sudah sesuai antar halamannya, mulai dari penggunaan
-            font, warna, serta layout dari halaman-webnya.
+            Website ini sudah sesuai antar halamannya, mulai dari
+            <b>penggunaan font, warna, serta layout</b> dari halaman-webnya.
           </td>
         </tr>
         <tr>
           <td>8</td>
           <td>Kesesuaian website terhadap tema</td>
-          <td>Website ini sesuai dengan tema yang telah diberikan.</td>
+          <td>
+            Website ini sesuai dengan tema yang telah diberikan yaitu
+            <b>Penginapan/Akomodasi.</b>
+          </td>
         </tr>
       </table>
     </div>
