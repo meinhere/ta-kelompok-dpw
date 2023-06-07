@@ -46,6 +46,7 @@ body {
   margin: 0 1rem;
 }
 .menu .menu-nav a:hover,
+.menu .menu-nav a.active,
 .sidebar-box .sidebar .sidebar-content a:hover {
   color: var(--secondary);
 }
@@ -59,6 +60,7 @@ body {
   transition: 0.2s linear;
 }
 .menu .menu-nav a:hover::after,
+.menu .menu-nav a.active::after,
 .sidebar-box .sidebar .sidebar-content a:hover::after {
   transform: scaleX(0.5);
 }
@@ -644,6 +646,9 @@ footer {
     flex: 1;
     padding: 0;
   }
+  .room-box .room-content .room-details p {
+    margin-bottom: 15px;
+  }
 
   .myForm .form-group {
     flex-wrap: wrap;
@@ -659,11 +664,19 @@ footer {
   .form-group .form-box .input-group .tel-inp-group .form-input {
     width: 90%;
   }
+
+  .profil {
+    width: 60%;
+  }
 }
 
 /* Mobile */
 @media (max-width: 450px) {
   html {
-    font-size: 55%;
+    font-size: 60%;
+  }
+
+  .profil {
+    width: 100%;
   }
 }

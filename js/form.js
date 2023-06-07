@@ -1,17 +1,19 @@
 // ## VALIDATE FORM ##
-const formInput = document.querySelectorAll(".form-input"); // ambil semua elemen dengan class form-input
-var form = document.getElementById("myForm"); // ambil elemen dengan id form
+const formInput = document.querySelectorAll(".form-input"); // ambil semua elemen dengan nama class form-input
+var form = document.getElementById("myForm"); // ambil elemen dengan nama id myForm
+
+// Set Default Checked in Radio Button Input
 
 // Set Default Value Date
 const date = new Date(); // inisialisasi built-in function Date()
 var year = date.getFullYear(); // ambil tahun sekarang
-var month = date.getMonth() + 1; // ambil bulan sekarang (tambah 1 karena default isi = 0)
+var month = date.getMonth() + 1; // ambil bulan sekarang (tambah 1 karena default bernilai = 0)
 var day = date.getDate(); // ambil hari sekarang
 month = month < 10 ? "0" + month : month; // apabila month < 10 maka tambahi "0" (untuk memenuhi format)
 day = day < 10 ? "0" + day : day; // apabila day < 10 maka tambahi "0" (untuk memenuhi format)
 
-var fullDate = `${year}-${month}-${day}`; // gabung tahun-bulan-hari
-document.querySelector("#check-in").setAttribute("value", fullDate); // isi value elemen dengan id check-in
+var fullDate = `${year}-${month}-${day}`; // gabung tahun-bulan-hari (format input type date)
+document.querySelector("#check-in").setAttribute("value", fullDate); // Set value elemen dengan nama id check-in
 
 // Function Validate
 function validate() {
@@ -26,14 +28,18 @@ function validate() {
     // Untuk Check-in dan Check-out
     if (inputName == "check-in" || inputName == "check-out") {
       var dateNow = new Date(fullDate).getTime(); // ambil waktu (int) sekarang
-      var dateReserved = new Date(input.value).getTime(); // ambil waktu (int) tanggal yang akan dipesan
+      var dateReserved = new Date(input.value).getTime(); // ambil waktu (int) tanggal check-in dan check-out
 
-      if (input.value == "") {
-        pesanError.innerHTML = "Tanggal harus diisi";
-      } else if (dateNow > dateReserved) {
-        pesanError.innerHTML = "Tanggal tidak valid";
+      // jika inputan tidak kosong
+      if (input.value != "") {
+        // jika tanggal dari check-in atau checkout < tanggal sekarang
+        if (dateReserved < dateNow) {
+          pesanError.innerHTML = "Tanggal tidak valid";
+        } else {
+          pesanError.innerHTML = "";
+        }
       } else {
-        pesanError.innerHTML = "";
+        pesanError.innerHTML = "Tanggal harus diisi";
       }
     }
     // Untuk Check-out
@@ -52,43 +58,56 @@ function validate() {
 
     // Validasi Nama Lengkap
     if (inputName == "nama") {
-      var namaPattern = /^[\D]+$/;
-      if (input.value == "") {
-        pesanError.innerHTML = "Field tidak boleh kosong!!";
-      } else if (input.value.length < 3 || input.value.length > 50) {
-        pesanError.innerHTML = "Nama terlalu pendek/panjang";
-      } else if (!namaPattern.test(input.value)) {
-        pesanError.innerHTML = "Field harus berisi huruf";
+      var namaPattern = /^[\D]+$/; // value tidak boleh angka
+
+      // jika inputan tidak kosong
+      if (input.value != "") {
+        // jika panjang inputan < 3 atau panjang inputan > 50
+        if (input.value.length < 3 || input.value.length > 50) {
+          pesanError.innerHTML = "Nama terlalu pendek/panjang";
+        } else if (!namaPattern.test(input.value)) {
+          pesanError.innerHTML = "Field harus berisi huruf";
+        } else {
+          pesanError.innerHTML = "";
+        }
       } else {
-        pesanError.innerHTML = "";
+        pesanError.innerHTML = "Field tidak boleh kosong!!";
       }
     }
 
     // Validasi Email
     if (inputName == "email") {
-      var emailPattern = /^[\S]+@[^\.][\S]+\.[\S]+$/;
-      if (input.value == "") {
-        pesanError.innerHTML = "Field tidak boleh kosong!!";
-      } else if (input.value.length > 50) {
-        pesanError.innerHTML = "Email terlalu panjang";
-      } else if (!emailPattern.test(input.value)) {
-        pesanError.innerHTML = "Email tidak valid";
+      var emailPattern = /^[\S]+@[^\.][\S]+\.[\S]+$/; // format email
+
+      // jika inputan tidak kosong
+      if (input.value != "") {
+        if (!emailPattern.test(input.value)) {
+          pesanError.innerHTML = "Email tidak valid";
+        } else if (input.value.length > 50) {
+          pesanError.innerHTML = "Email terlalu panjang";
+        } else {
+          pesanError.innerHTML = "";
+        }
       } else {
-        pesanError.innerHTML = "";
+        pesanError.innerHTML = "Field tidak boleh kosong!!";
       }
     }
 
     // Validasi Nomor Telepon
     if (inputName == "telepon") {
       var teleponPattern = /^[\d]+$/;
-      if (input.value == "") {
-        pesanError.innerHTML = "Field tidak boleh kosong!!";
-      } else if (!teleponPattern.test(input.value)) {
-        pesanError.innerHTML = "Nomor telepon harus berupa angka";
-      } else if (input.value.length < 11 || input.value.length > 13) {
-        pesanError.innerHTML = "Digit nomor terlalu pendek/panjang)";
+
+      // jika inputan tidak kosong
+      if (input.value != "") {
+        if (!teleponPattern.test(input.value)) {
+          pesanError.innerHTML = "Nomor telepon harus berupa angka";
+        } else if (input.value.length < 11 || input.value.length > 13) {
+          pesanError.innerHTML = "Digit nomor terlalu pendek/panjang)";
+        } else {
+          pesanError.innerHTML = "";
+        }
       } else {
-        pesanError.innerHTML = "";
+        pesanError.innerHTML = "Field tidak boleh kosong!!";
       }
     }
 
@@ -130,7 +149,7 @@ formInput.forEach(function (input) {
 
   // Apabila type input adalah date
   if (type == "date") {
-    // maka akanm emanggil fungsi validate() ketika event change
+    // maka akan memanggil fungsi validate() ketika event change
     input.addEventListener("change", function () {
       validate();
     });
