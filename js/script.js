@@ -48,6 +48,15 @@ if (fileName == "form.html") {
 const homeLink = document.querySelector(".home-link"); // ambil elemen dengan nama class home-link
 const accomodationLink = document.querySelector(".accomodation-link"); // ambil elemen dengan nama class accomodation-link
 
+// Apabila fileName index.html
+if (fileName == "index.html") {
+  homeLink.classList.add("active"); // tambah class active pada elemen homeLink
+  accomodationLink.classList.remove("active"); // hapus class active pada elemen accomodationLink
+} else if (fileName == "index.html#accomodation") {
+  homeLink.classList.remove("active"); // hapus class active pada elemen homeLink
+  accomodationLink.classList.add("active"); // tambah class active pada elemen accomodationLink
+}
+
 // Ketika homeLink diclick
 homeLink.onclick = function () {
   homeLink.classList.add("active"); // tambah class active pada elemen homeLink
