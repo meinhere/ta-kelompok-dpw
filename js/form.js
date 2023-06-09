@@ -56,6 +56,7 @@ function validate() {
         document.querySelector("#check-out").value
       ).getTime(); // ambil tanggal check-out
 
+      // Apabila tanggal check-in lebih dari check-out
       if (dateCheckIn > dateCheckOut) {
         pesanError.innerHTML = "Tanggal check-out tidak valid";
       }
@@ -100,7 +101,7 @@ function validate() {
 
     // Validasi Nomor Telepon
     if (inputName == "telepon") {
-      var teleponPattern = /^[\d]+$/;
+      var teleponPattern = /^[\d]+$/; // value harus angka
 
       // jika inputan tidak kosong
       if (input.value != "") {
